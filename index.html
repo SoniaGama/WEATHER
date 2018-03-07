@@ -21,7 +21,7 @@
     </header>
 
     <section class="container-fluid">
-        <button id="getWeather" type="button" class="waves-effect indigo lighten-1 btn hoverable">Send my location</button>
+        <button id="getWeather" type="button" class="waves-effect indigo lighten-1 btn hoverable">Click to send my location</button>
     </section>
 
     <main class="container" id="container-weather">
@@ -30,24 +30,24 @@
                 <span id="title" class="card-title activator grey-text text-darken-4 center">Card Title
                     <i class="material-icons right">add_circle</i>
                 </span>
-                <table id="table-results" class="centered center-align">
-                    <tbody>
-                        <tr>
+                <table class="centered center-align">
+                    <tbody id="container-table-currently">
+                        <!-- <tr>
                             <td>Wind</td>
-                            <td clas="data-currently"></td>
+                            <td class="data-currently"></td>
                         </tr>
                         <tr>
                             <td>Humidity</td>
-                            <td clas="data-currently"></td>
+                            <td class="data-currently"></td>
                         </tr>
                         <tr>
                             <td>Uv</td>
-                            <td clas="data-currently"></td>
+                            <td class="data-currently"></td>
                         </tr>
                         <tr>
                             <td>Pressure</td>
-                            <td clas="data-currently"></td>
-                        </tr>
+                            <td class="data-currently"></td>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -56,8 +56,8 @@
                     <i class="material-icons right">highlight_off</i>
                 </span>
                 <table id="table-results-week" class="centered">
-                    <tbody>
-                        <tr>
+                    <tbody id="container-table-week">
+                        <!-- <tr>
                             <td class="data-week"></td>
                             <td class="data-week"></td>
                         </tr>
@@ -88,7 +88,7 @@
                         <tr>
                             <td class="data-week"></td>
                             <td class="data-week"></td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
