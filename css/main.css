@@ -1,12 +1,17 @@
-.brand-logo {
+.brand-logo,
+#getWeather {
     color: #ffc107 !important;
+    letter-spacing: 5px;
 }
 
 #getWeather {
     width: 100%;
-    color: #00695c;
 }
 
 .contaier-fluid {
     width: 100%;
+}
+
+.card{
+ height: 80vh !important;
 }
