@@ -12,6 +12,12 @@
     width: 100%;
 }
 
-.card{
- height: 80vh !important;
+.card,
+.card-reveal {
+    height: 80vh !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.data-currently {
+    width: 50%;
 }

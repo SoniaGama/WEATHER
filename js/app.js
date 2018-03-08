@@ -1,8 +1,10 @@
 const getWeatherButton = document.getElementById('getWeather');
 const container = document.getElementById('container-weather');
+const icon = document.getElementById('add-icon');
 
 window.addEventListener("load", () => {
     getWeatherButton.addEventListener('click', getLocation);
+    icon.addEventListener('click', hideCardDay);
 });
 
 getLocation = (e) => {
@@ -56,11 +58,8 @@ getDataJson = json => {
 
 paintCardCurrently = (temperature, wind, humidity, uv, pressure, icon) => {
     const containerCurrently = document.getElementById('container-table-currently');
-     const output = `
-         <tr>
-            <td>Temperature</td>
-            <td class="data-currently">${temperature}°C</td>
-        </tr>
+    const containerTitle = document.getElementById('title');
+    const outputCard = `
         <tr>
             <td>Wind</td>
             <td class="data-currently">${wind}</td>
@@ -78,7 +77,17 @@ paintCardCurrently = (temperature, wind, humidity, uv, pressure, icon) => {
             <td class="data-currently">${pressure}</td>
         </tr>   
     `
-    containerCurrently.innerHTML = output;
+    const outputTitle = `
+        <span class="card-title activator grey-text text-darken-4 center">${temperature}°C
+            <i id="add-icon" class="material-icons right">add_circle</i>
+        </span>    
+    `
+    containerCurrently.innerHTML = outputCard;
+    containerTitle.innerHTML = outputTitle;
+}
+
+hideCardDay = (e) => {
+    
 
 }
 
@@ -93,3 +102,6 @@ paintCardWeek = (iconDay, temperatureMax, temperatureMin) => {
     `
     containerWeek.insertAdjacentHTML('beforeEnd', output); 
 }
+
+
+
