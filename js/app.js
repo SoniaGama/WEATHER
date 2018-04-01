@@ -1,10 +1,7 @@
-const getWeatherButton = document.getElementById('getWeather');
-const container = document.getElementById('container-weather');
-const icon = document.getElementById('add-icon');
-
 window.addEventListener("load", () => {
-    getWeatherButton.addEventListener('click', getLocation);
-    icon.addEventListener('click', hideCardDay);
+    document.getElementById('getWeather').addEventListener('click', getLocation);
+    // icon.addEventListener('click', hideCardDay);
+    getJsonImage();
 });
 
 getLocation = (e) => {
@@ -32,8 +29,6 @@ getJson = (latitude, longitude) => {
         console.log(error);        
     })
 }
-
-// cuando se concatenan metodos si no son anidados debe especificarse el return
 
 getDataJson = json => {   
     const infoCurrently = json.currently;
@@ -78,17 +73,25 @@ paintCardCurrently = (temperature, wind, humidity, uv, pressure, icon) => {
         </tr>   
     `
     const outputTitle = `
-        <span class="card-title activator grey-text text-darken-4 center">${temperature}°C
+        <span class="card-title activator center">${temperature}°C
             <i id="add-icon" class="material-icons right">add_circle</i>
         </span>    
-    `
+    `;    
     containerCurrently.innerHTML = outputCard;
     containerTitle.innerHTML = outputTitle;
+    document.getElementById('add-icon').addEventListener('click', hideCardDay);
 }
 
 hideCardDay = (e) => {
-    
+    // document.getElementById('card-currently').style.display = 'none';
+    document.getElementById('card-currently').classList.add('hide')
 
+    document.getElementById('card-week').addEventListener('click', showCardDay);
+}
+
+showCardDay = (e) => {
+    // document.getElementById('card-currently').style.display = 'block';
+    document.getElementById('card-currently').classList.remove('hide');
 }
 
 paintCardWeek = (iconDay, temperatureMax, temperatureMin) => {
@@ -96,11 +99,27 @@ paintCardWeek = (iconDay, temperatureMax, temperatureMin) => {
 
     const output = `
         <tr>
-            <td class="data-week">${temperatureMin}°C</td>
-            <td class="data-week">${temperatureMax}°C</td>
+            <td class="data-week">${temperatureMin} °C</td>
+            <td class="data-week">${temperatureMax} °C</td>
         </tr>                        
     `
     containerWeek.insertAdjacentHTML('beforeEnd', output); 
+}
+
+getJsonImage = () => {
+    fetch('https://cors-anywhere.herokuapp.com/https://api.unsplash.com/photos/random/?client_id=e88d235483797e4439540cd6aac519cffc62926d060654ba2499dc1e5a031033')
+    .then(response =>{
+        response.json().then(result => {
+            paintImage(result.urls.regular);            
+        })
+    }).catch(error => {
+        console.log(error);        
+    });
+}
+
+paintImage = (image) => {      
+    document.body.style.backgroundImage = `url(${image})`;
+    document.body.style.backgroundSize = 'cover';    
 }
 
 

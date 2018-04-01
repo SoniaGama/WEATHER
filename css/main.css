@@ -2,20 +2,27 @@
 #getWeather {
     color: #ffc107 !important;
     letter-spacing: 5px;
-}
-
-#getWeather {
     width: 100%;
 }
+
+
+/* #getWeather {
+    width: 100%;    
+} */
 
 .contaier-fluid {
     width: 100%;
 }
 
 .card,
+.card-content,
 .card-reveal {
     height: 80vh !important;
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: #fff;    
+}
+
+.color-alpha {
+    background-color: rgba(0, 0, 0, 0.6) !important;
 }
 
 .data-currently {

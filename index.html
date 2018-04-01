@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,30 +10,30 @@
     <title>WEATHER</title>
 </head>
 
-<body>
+<body id="backgroud-image">
     <header class="conainer-fluid">
         <nav>
             <div class="nav-wrapper  purple darken-4">
-                <span class="brand-logo center">WEATHER</span>
+                <span class="brand-logo center">WELCOME TO YOUR WEATHER</span>
             </div>
         </nav>
     </header>
 
     <section class="container-fluid">
-        <button id="getWeather" type="button" class="waves-effect indigo lighten-1 btn hoverable">Click to send my location</button>
+        <button id="getWeather" type="button" class="waves-effect indigo lighten-1 btn hoverable">CLICK ME</button>
     </section>
 
     <main class="container" id="container-weather">
-        <div class="card hoverable">
-            <div class="card-content">
+        <div class="card hoverable color-alpha">
+            <div id="card-currently" class="card-content color-alpha">
                 <section id="title"></section>
                 <table class="centered center-align">
                     <tbody id="container-table-currently"></tbody>
                 </table>
             </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Card Title
-                    <i class="material-icons right">highlight_off</i>
+            <div id="card-weather" class="card-reveal color-alpha">
+                <span class="card-title center">The weather in your week
+                    <i id="card-week" class="material-icons right">highlight_off</i>
                 </span>
                 <table id="table-results-week" class="centered">
                     <tbody id="container-table-week"></tbody>
