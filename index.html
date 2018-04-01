@@ -14,7 +14,7 @@
     <header class="conainer-fluid">
         <nav>
             <div class="nav-wrapper  purple darken-4">
-                <span class="brand-logo center">WELCOME TO YOUR WEATHER</span>
+                <span class="brand-logo center">YOUR WEATHER</span>
             </div>
         </nav>
     </header>
@@ -27,21 +27,21 @@
         <div class="card hoverable color-alpha">
             <div id="card-currently" class="card-content color-alpha">
                 <section id="title"></section>
-                <table class="centered center-align">
+                <table class="centered">
                     <tbody id="container-table-currently"></tbody>
                 </table>
             </div>
-            <div id="card-weather" class="card-reveal color-alpha">
-                <span class="card-title center">The weather in your week
-                    <i id="card-week" class="material-icons right">highlight_off</i>
+            <div id="card-weather" class="card-reveal color-alpha">                
+                <span id="close-card" class="card-title center">
+                    The weather in your week
+                    <i class="material-icons right">highlight_off</i>
                 </span>
-                <table id="table-results-week" class="centered">
+                <table class="centered" id="table-results-week">
                     <tbody id="container-table-week"></tbody>
                 </table>
             </div>
         </div>
     </main>
-
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="js/app.js"></script>
