@@ -11,7 +11,7 @@
 
 - Para generar la imagenes de fondo se usa la API de [Unsplash](https://unsplash.com/developers).
 
-![weather day](https://user-images.githubusercontent.com/32865262/38893499-12af653e-4250-11e8-9224-7207d23d5bb3.gif)
+![weather day](https://user-images.githubusercontent.com/32865262/38894779-d6732ee4-4253-11e8-82ee-846f2fb59da7.gif)
 
 <!-- ![weather day](https://user-images.githubusercontent.com/32865262/38177851-8b9a3ffe-35cc-11e8-9e07-3f5bb82c8bac.PNG) -->
 
