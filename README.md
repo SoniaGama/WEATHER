@@ -1,15 +1,16 @@
 # WEATHER
 
-### Página que usa la geolocalización del usuario para informar el clima del día en curso y el de los dias de la semana, en tiempo real.
+### Página que usa la geolocalización del usuario para informar el clima del día en curso y el de los días de la semana, en tiempo real.
 
-## Tecnologias usadas:
+## Tecnologías usadas:
 
+- Utilicé el lenguaje de JavaScript para crear el código front-end.
 
-- Para conocer la localización de usuario se usa la API de [geolocalización de HTML5](https://developer.mozilla.org/es/docs/WebAPI/Using_geolocation).
+- Para conocer la localización de usuario use la API de [geolocalización de HTML5](https://developer.mozilla.org/es/docs/WebAPI/Using_geolocation).
 
-- Para conocer el clima se usa la [API Dark Sky](https://darksky.net/dev).
+- Para conocer el clima use la [API Dark Sky](https://darksky.net/dev).
 
-- Para generar la imagenes de fondo se usa la API de [Unsplash](https://unsplash.com/developers).
+- Para generar la imágenes de fondo use la API de [Unsplash](https://unsplash.com/developers).
 
 ![weather day](https://user-images.githubusercontent.com/32865262/38894779-d6732ee4-4253-11e8-82ee-846f2fb59da7.gif)
 
